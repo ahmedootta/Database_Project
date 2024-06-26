@@ -28,7 +28,3 @@ South Valley University aims to develop an electronic system for examination and
 - **ERD of the Database:** Entity-Relationship Diagram illustrating the database structure.
 - **Mapping and Normalization (3N):** Database schema normalization ensuring data integrity.
 - **Database Files:** Files containing the database schema and data.
-- **SQL Queries:**
-  - Write a query for students to view their results per course.
-  - Write a query for the head of department to view evaluations of each course and professor.
-  - Write a query to retrieve the top 10 high scores per course.

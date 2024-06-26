@@ -1,0 +1,7 @@
+STUDENT [#ID, username, password, education_lvl]
+PROFESSOR [#ID, name, Question_bank_id(fk)]
+DEPARTMENT [#ID, name, supervisor_id(fk)]
+COURSE [#CODE, name, Question_bank_id]
+EXAM [#ID, #STUDENT_ID(fk), #COURSE_ID(fk), professor_id(fk), result]
+course_prof_dept [#COURSE_CODE(fk), #DEPT_ID(fk), #PROF_ID(fk)]
+reviews [#STUDENT_ID(fk), #COURSE_ID(fk), C_review, #PROF_ID(fk), P_Review]

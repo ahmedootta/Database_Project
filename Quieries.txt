@@ -1,0 +1,30 @@
+SELECT * FROM student;
+SELECT * FROM professor;
+SELECT * FROM course;
+SELECT * FROM department;
+SELECT * FROM exam;
+SELECT * FROM course_prof_dept;
+SELECT * FROM reviews;
+_______________________________________
+required:
+----------
+(1)- SELECT s.username, c.name AS course_name, e.result
+     FROM exam e inner JOIN student s ON e.student_id = s.id
+     inner JOIN course c ON e.course_code = c.code;
+
+
+(2)-SELECT
+    c.name AS course_name,
+    p.name AS professor_name,
+    r.course_review,
+    r.professor_review
+    FROM reviews r JOIN course c ON r.course_code = c.code
+    JOIN professor p ON r.professor_id = p.id 
+    JOIN department d ON p.question_bank_id = d.supervisor_id;
+
+(3)-
+    SELECT s.username, e.result
+    FROM student s
+    JOIN exam e ON s.id = e.student_id
+    ORDER BY e.result DESC
+    LIMIT 10;
